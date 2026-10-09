@@ -1,0 +1,141 @@
+/* =========================================================================
+   EcoNatur — Design Tokens (SURSĂ UNICĂ DE ADEVĂR)
+
+   Extrase din pagina principală aprobată la 2026-10-09 (Claude Design v2),
+   prin măsurare în pagina randată (Playwright, 1440 px; machetele 390 și 1280).
+   Culorile siglei (--color-logo-green, --color-ink) sunt măsurate în PNG-ul
+   siglei și sunt BLOCATE — nu se modifică hexul.
+
+   ⚠️ Fișierul trebuie să fie SUPRASETUL a tot ce folosesc componentele.
+   O variabilă CSS nedefinită invalidează TOATĂ declarația. Adaugi un token
+   în componentă ⇒ îl adaugi și aici, în același commit.
+   ========================================================================= */
+
+:root {
+  /* ---- Culorile siglei (BLOCATE — măsurate în PNG) ---------------------- */
+  --color-logo-green: #709268;     /* SUPRAFAȚĂ, nu text: 3,5 pe alb. Pe el se scrie cu --color-ink (5,78) */
+  --color-ink: #040707;            /* negrul siglei = textul cel mai puternic, butonul plin principal */
+
+  /* ---- Accent, variante, complement ------------------------------------ */
+  --color-accent: #4A6844;         /* verde text-sigur: butoane Caută/Adaugă, linkuri, etichete. 6,26 pe alb */
+  --color-complement: #9A4E22;     /* „caisă uscată": scris de mână, etichete de regim. 6,02 pe alb */
+
+  /* ---- Scara de text (4 trepte) — contrast pe alb · #F2F1EC · #E6E4DD ---- */
+  --color-text-1: #040707;         /* 20,2 · 17,9 · 15,9 — titluri, prețuri, nume de produs */
+  --color-text-2: #2B302D;         /* 13,4 · 11,9 · 10,5 — paragrafe */
+  --color-text-3: #474D49;         /* 8,7 · 7,7 · 6,8 — descrieri, etichete de fișă */
+  --color-text-4: #5E645F;         /* 6,1 · 5,4 · 4,8 — numere de raion, subsol, copyright */
+  --color-text-on-dark: #FFFFFF;
+  --color-text-on-ink: #E6E4DD;    /* paragraf pe caseta neagră */
+
+  /* ---- Fundaluri (3 trepte) — „hârtie și carton" ----------------------- */
+  --color-bg-white: #FFFFFF;       /* antet, carduri de produs, banda de promisiuni */
+  --color-bg-paper: #F2F1EC;       /* fundalul de BAZĂ al paginii, subsolul, farfuria */
+  --color-bg-carton: #E6E4DD;      /* secțiunea Vracuri, liniile, perforația etichetei */
+
+  /* ---- Linii ----------------------------------------------------------- */
+  --color-line: #E6E4DD;           /* 1 px: chenare, separatoare, sub antet */
+
+  /* ---- Funcționale (DERIVATE 2026-10-09 — pagina nu le arată, Woo le cere) */
+  --color-success: #4A6844;        /* = accentul, nu o culoare nouă */
+  --color-error: #B3261E;          /* 6,54 pe alb */
+  --color-warning: #8A5A00;        /* 5,93 pe alb */
+  --color-info: #2F5D7A;           /* 7,08 pe alb */
+  --color-ink-hover: #2B302D;      /* hover pe butoanele negre */
+
+  /* ---- Semantice ------------------------------------------------------- */
+  --text-heading: var(--color-text-1);
+  --text-body: var(--color-text-2);
+  --text-muted: var(--color-text-3);
+  --text-subtle: var(--color-text-4);
+  --text-link: var(--color-accent);
+  --text-hand: var(--color-complement);
+
+  /* ---- Tipografie ------------------------------------------------------ */
+  --font-display: 'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif; /* titluri, prețuri, etichete */
+  --font-text: 'Figtree', system-ui, sans-serif;                               /* corp, butoane, câmpuri */
+  --font-hand: 'Caveat', 'Segoe Print', cursive;                               /* DOAR gramaj / „ambalat la Jebel" */
+
+  --fs-h1: clamp(38px, 6vw, 76px);         /* 76 desktop · 38 telefon */
+  --fs-h2-xl: clamp(30px, 4.6vw, 58px);    /* Vracuri, Despre noi */
+  --fs-h2: clamp(28px, 3.4vw, 44px);       /* titlu de secțiune */
+  --fs-h2-sm: 20px;                        /* „Cauți după regim?" */
+  --fs-promise: 24px;                      /* banda de promisiuni */
+  --fs-price: 22px;                        /* preț pe card */
+  --fs-price-sm: 21px;                     /* preț pe rândul de vrac */
+  --fs-body-lg: clamp(17px, 1.5vw, 19px);  /* paragraful din deschidere */
+  --fs-body: 17px;
+  --fs-ui: 16px;                           /* butoane, linkuri de acțiune */
+  --fs-ui-sm: 15px;                        /* nume de produs, pastile, subsol */
+  --fs-small: 14px;                        /* banda de sus, copyright */
+  --fs-label: 13px;                        /* etichetă de secțiune MAJUSCULE */
+  --fs-badge: 12px;                        /* insigne pe card, numere de raion */
+  --fs-search: 17px;                       /* câmpul de căutare — minimum 16 (iOS) */
+  --fs-hand-lg: 30px;
+  --fs-hand: 26px;
+  --fs-hand-sm: 22px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;                         /* Bricolage în titluri și prețuri */
+
+  --lh-display: 0.98;
+  --lh-heading: 1.05;
+  --lh-snug: 1.35;
+  --lh-body: 1.5;
+  --tracking-display: -0.025em;
+  --tracking-h2: -0.02em;
+  --tracking-label: 0.08em;
+  --tracking-caps: 0.04em;
+
+  /* ---- Spațiere -------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 14px;
+  --space-5: 18px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-section: clamp(40px, 6vw, 77px);
+  --gutter: clamp(16px, 3vw, 40px);        /* 16 telefon · 40 desktop */
+
+  /* ---- Formă ----------------------------------------------------------- */
+  --radius-btn: 12px;              /* butoane dreptunghiulare cu colț moale — NU pastilă */
+  --radius-btn-card: 10px;         /* butonul „Adaugă" */
+  --radius-card: 14px;             /* cardul de produs */
+  --radius-plate: 9px;             /* farfuria pozei */
+  --radius-pill: 24px;             /* DOAR „Căutate des" și filtrele de regim */
+  --radius-badge: 5px;
+  --radius-note: 6px;
+  --radius-round: 50%;
+  --border-width: 1px;
+
+  /* ---- Adâncime -------------------------------------------------------- */
+  /* Cardurile de produs N-AU umbră: alb pe hârtie gri e destul.
+     Umbra aparține etichetei de sac (motivul 1). */
+  --shadow-label: 0 10px 30px rgba(4, 7, 7, 0.12);
+  --shadow-label-strong: 0 8px 22px rgba(4, 7, 7, 0.16);
+
+  /* ---- Mișcare --------------------------------------------------------- */
+  /* Pagina aprobată are ZERO animații. Hover = doar schimbare de culoare. */
+  --motion: 0ms;
+
+  /* ---- Motive ---------------------------------------------------------- */
+  --label-tilt-hero: 3deg;
+  --label-tilt-about: -1.5deg;
+  --plate-inset: 19%;              /* margine interioară a farfuriei: poza de 600 px nu trece de ~300 */
+  /* dungi diagonale măsurate: farfuria de card (9/18 px), poza mare (10/20 px) */
+  --plate-stripes: repeating-linear-gradient(135deg, #F2F1EC 0 9px, #EAE8E2 9px 18px);
+  --photo-stripes: repeating-linear-gradient(135deg, #E6E4DD 0 10px, #ECEAE4 10px 20px);
+  --perforation: 8px dotted var(--color-bg-carton);   /* marginea de sus a etichetei (6–12 px după mărime) */
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --content-max: 1240px;           /* 1160 util + margini 40 */
+  --tap-min: 44px;
+  --measure: 62ch;
+}
