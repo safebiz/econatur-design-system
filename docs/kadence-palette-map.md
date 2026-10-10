@@ -16,8 +16,8 @@ Paleta se scrie în temă **înainte de prima pagină construită**.
 | 10 | accent complementar | `#709268` | verdele siglei — **doar suprafață, text negru pe el** |
 | 11 | succes | `#4A6844` | = accentul |
 | 12 | info | `#2F5D7A` | |
-| 13 | avertizare | `#8A5A00` | stoc scăzut |
-| 14 | eroare | `#B3261E` | |
+| 13 | eroare | `#B3261E` | convenția Kadence (implicit roșu) |
+| 14 | avertizare | `#8A5A00` | stoc scăzut (implicit portocaliu) |
 | 15 | complement | `#9A4E22` | „caisă uscată” — scris de mână, etichete de regim |
 
 > 🔴 **Sloturile au roluri FIXE, nu sunt 15 culori libere** — tema le aplică singură după index.
